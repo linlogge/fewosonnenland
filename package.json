@@ -9,9 +9,8 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/renderer-react": "^0.2.2",
-    "@astrojs/renderer-svelte": "^0.1.2",
-    "astro": "^0.20.12"
+    "@astrojs/renderer-react": "^0.3.0-next.0",
+    "astro": "^0.21.0-next.3"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
