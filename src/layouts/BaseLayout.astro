@@ -1,0 +1,93 @@
+---
+const {title} = Astro.props;
+const year = new Date().getFullYear();
+---
+<html>
+  <head>
+    <title>{title} - Ferienwohnungen Sonnenland</title>
+    <link rel="stylesheet" href="{Astro.resolve('../style/global.css')}">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  </head>
+  <body class="room-detials">
+    <header id="main-header" class="">
+      <div class="inner-container container">
+        <div class="l-sec col-xs-8 col-sm-6 col-md-3">
+          <a href="/" id="t-logo">
+            <span class="title">Sonnenland</span>
+            <span class="desc">Ferienwohnungen</span>
+          </a>
+        </div>
+        <div class="r-sec col-xs-4 col-sm-6 col-md-9">
+          <nav id="main-menu">
+            <ul class="list-inline">
+              <li>
+                <a href="/">Unsere Wohnungen</a>
+                <ul>
+                  <li>
+                    <a href="/wohnung-1">Wohnung I</a>
+                  </li>
+                  <li>
+                    <a href="/wohnung-2">Wohnung II</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/preisgestaltung">Preisgestaltung</a>
+              </li>
+            </ul>
+          </nav>
+          <div id="main-menu-handle" class="ravis-btn btn-type-2">
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-times"></i>
+          </div>
+          <a
+            href="/kontakt"
+            id="header-book-bow"
+            class="ravis-btn btn-type-2"
+          >
+            <span>Kontakt</span> <i class="fa fa-calendar"></i>
+          </a>
+        </div>
+      </div>
+      <div id="mobile-menu-container">
+        <nav id="main-menu" class=""></nav>
+      </div>
+    </header>
+    <slot />
+    <footer id="main-footer">
+      <div class="inner-container container">
+        <div class="t-sec clearfix">
+          <div class="widget-box col-sm-6 col-md-3">
+            <a href="#" id="f-logo">
+              <span class="title">Sonnenland</span>
+              <span class="desc">Ferienwohnungen</span>
+            </a>
+          </div>
+        </div>
+        <div class="b-sec clearfix">
+          <div class="copy-right">
+            &copy; {year} Ferienwohnungen Sonnenland Potsdam
+          </div>
+          <ul class="social-icons list-inline">
+            <li>
+              <a href="/impressum">Impressum</a>
+            </li>
+            <li>
+              <a href="/datenschutz">Datenschutz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/assets/js/jquery-3.js"></script>
+    <script type="text/javascript" src="/assets/js/helper.js"></script>
+    <script type="text/javascript" src="/assets/js/owl.js"></script>
+    <script type="text/javascript" src="/assets/js/select2.js"></script>
+    <script type="text/javascript" src="/assets/js/imgloaded.js"></script>
+    <script type="text/javascript" src="/assets/js/isotope.js"></script>
+    <script type="text/javascript" src="/assets/js/template.js"></script>
+  </body>
+</html>
